@@ -4,9 +4,9 @@ import java.util.*;
 /**
  *插入排序
  */
-public class InsertSort
+public class InsertSort implements Sort
 {
-    public static int[] sort(int[] array)
+    public int[] sort(int[] array)
     {
         int tmp = 0;
         int len = array.length;
@@ -27,16 +27,5 @@ public class InsertSort
             }
         }
         return array;
-    }
-}
-
-class InsertSortTest
-{
-    public static void main(String[] args)
-    {
-        int[] array = RandomArray.randomArray();    
-        SortUtil.show(array);
-        array = InsertSort.sort(array);
-        SortUtil.show(array);
     }
 }

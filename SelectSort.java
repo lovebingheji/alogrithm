@@ -1,9 +1,9 @@
 import java.lang.*;
 import java.util.*;
 
-public class Select
+public class SelectSort implements Sort
 {
-    public static int[] sort(int[] array, boolean asc)
+    public int[] sort(int[] array)
     {
         int min = 0;
         int len = array.length - 1;
@@ -29,24 +29,6 @@ public class Select
                 array[min] = tmp;
             }
         }
-
-        if (!asc)
-        {
-            array = SortUtil.reverse(array); 
-        }
         return array;
-    }
-}
-
-class SelectTest
-{
-    public static void main(String[] args)
-    {
-        int[] array = RandomArray.randomArray();
-        SortUtil.show(array);
-        array = Select.sort(array, true);
-        SortUtil.show(array);
-        Select.sort(array, false);
-        SortUtil.show(array);
     }
 }
