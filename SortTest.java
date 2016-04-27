@@ -3,7 +3,7 @@ public class SortTest
 {
     public static void main(String[] args)
     {
-        test(new InsertSort());  
+        test(new MergeSort());  
     }
 
     public static void test(Sort sort)
